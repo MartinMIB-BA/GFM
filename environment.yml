@@ -1,0 +1,40 @@
+name: gfm-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+
+  # základné
+  - numpy
+  - pandas
+  - matplotlib
+  - tqdm
+  - requests
+
+  # geospatial
+  - geopandas
+  - shapely
+  - pyproj
+  - rasterio
+  - rioxarray
+  - xarray
+  - folium
+  - ipyleaflet
+  - pyrosm
+  - odc-stac
+  - pystac-client
+
+  # IO a vizualizácie
+  - pillow
+  - imageio
+  - ipywidgets
+
+  # Binder / notebook utils
+  - jupyterlab
+  - notebook
+
+  # pip doplnky (ak niečo chýba v conda-forge)
+  - pip:
+      - odc-stac
