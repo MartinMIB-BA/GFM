@@ -1,0 +1,5 @@
+#!/bin/bash
+set -ex
+
+# Enable JupyterLab widget extensions (needed for ipyleaflet / ipywidgets)
+jupyter labextension list 2>/dev/null || true
