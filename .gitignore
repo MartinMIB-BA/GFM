@@ -1,0 +1,15 @@
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Pixi environment (reproducible from pixi.toml + pixi.lock)
+.pixi/
+
+# OS files
+.DS_Store
+
+# Generated notebook outputs
+*.geojson
+*.tif
+*.gif
+*.mp4
+flood_frames/
