@@ -42,14 +42,16 @@ Environment Setup
 
 Prerequisites: pixi (https://pixi.sh)
 
-    # Install the environment
+    # Install the lightweight default environment (kernel + libraries)
     pixi install
 
-    # Launch JupyterLab (recommended for interactive widgets)
-    pixi run lab
+    # Launch JupyterLab (recommended for interactive widgets).
+    # JupyterLab/Notebook live in the optional "lab" environment so the
+    # default env stays small (e.g. when used only as a kernel on a hub).
+    pixi run -e lab lab
 
     # Or launch classic Notebook
-    pixi run notebook
+    pixi run -e lab notebook
 
 The environment is defined in pixi.toml and includes all dependencies
 (geospatial, visualization, STAC access, Jupyter).

@@ -3,10 +3,12 @@ name = "GFM-notebooks"
 channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 
+# Default environment = only what the notebook KERNEL needs at runtime.
+# It deliberately omits JupyterLab/Notebook/nodejs: on a JupyterHub node the
+# hub already provides the Jupyter frontend, so we just register this env as a
+# kernel. That keeps the env light (smaller home/NFS footprint, faster install).
 [dependencies]
 python = ">=3.11,<3.13"
-jupyterlab = ">=4.0"
-notebook = ">=7.0"
 ipykernel = ">=6.0"
 
 # Core geospatial
@@ -24,12 +26,13 @@ fiona = ">=1.9"
 pystac-client = ">=0.7"
 odc-stac = ">=0.3"
 
-# Visualization
-matplotlib = ">=3.7"
+# Visualization (browser-based). matplotlib-base avoids pulling the Qt GUI stack.
+matplotlib-base = ">=3.7"
 folium = ">=0.14"
 leafmap = ">=0.30"
 ipywidgets = ">=8.0"
 ipyleaflet = ">=0.18"
+anywidget = ">=0.9,<0.10"
 
 # Image / video processing
 pillow = ">=10.0"
@@ -38,10 +41,20 @@ imageio = ">=2.31"
 # Utilities
 requests = ">=2.28"
 tqdm = ">=4.65"
+
+# Optional: full Jupyter app, only for LOCAL use (pixi run -e lab lab).
+# Pulls JupyterLab/Notebook/nodejs, so it is kept OUT of the default env.
+[feature.lab.dependencies]
+jupyterlab = ">=4.0"
+notebook = ">=7.0"
 pixi-kernel = ">=0.7.1,<0.8"
-anywidget = ">=0.9,<0.10"
+
+[environments]
+lab = ["lab"]
 
 [tasks]
+export-binder-env = "pixi workspace export conda-environment --platform linux-64 binder/environment.yml"
+
+[feature.lab.tasks]
 lab = "jupyter lab"
 notebook = "jupyter notebook"
-export-binder-env = "pixi workspace export conda-environment --platform linux-64 binder/environment.yml"
