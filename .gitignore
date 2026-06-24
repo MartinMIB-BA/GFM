@@ -12,4 +12,7 @@
 *.tif
 *.gif
 *.mp4
+*.png
+*.csv
+*.gpkg
 flood_frames/
