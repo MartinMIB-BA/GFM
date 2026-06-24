@@ -1,8 +1,0 @@
-#!/bin/bash
-set -ex
-
-# Pre-compile Python bytecode to speed up first import at launch time
-python -m compileall -q /srv/conda/envs/notebook/lib/python3.11/ 2>/dev/null || true
-
-# Verify key imports work (catches missing deps at build time, not launch time)
-python -c "import leafmap; import maplibre; import ipyleaflet; import folium; print('All imports OK')"
