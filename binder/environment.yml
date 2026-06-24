@@ -3,7 +3,7 @@ channels:
   - conda-forge
 
 dependencies:
-  - python>=3.11,<3.13
+  - python>=3.11,<3.12
   - jupyterlab>=4.0
   - ipykernel>=6.0
   # Core geospatial
