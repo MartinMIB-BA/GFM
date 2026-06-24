@@ -15,4 +15,5 @@
 *.png
 *.csv
 *.gpkg
+*.geojson
 flood_frames/
