@@ -44,4 +44,3 @@ anywidget = ">=0.9,<0.10"
 [tasks]
 lab = "jupyter lab"
 notebook = "jupyter notebook"
-export-binder-env = "pixi workspace export conda-environment --platform linux-64 binder/environment.yml"

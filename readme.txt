@@ -55,15 +55,6 @@ The environment is defined in pixi.toml and includes all dependencies
 (geospatial, visualization, STAC access, Jupyter).
 
 
-Binder
-------
-This repository is Binder-compatible. The binder/ directory contains:
-- environment.yml  – conda environment for repo2docker
-- postBuild       – post-install script
-
-Launch on mybinder.org by pointing it at this repository.
-
-
 Key Dependencies
 ----------------
 - pystac-client, odc-stac  – STAC catalog search and lazy data loading
