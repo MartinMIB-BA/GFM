@@ -1,0 +1,33 @@
+# GFM Notebooks – shared dependencies
+# Install with: pip install -r requirements.txt
+
+# Core geospatial
+numpy
+pandas
+xarray
+geopandas
+shapely
+pyproj
+rasterio
+rioxarray
+fiona
+
+# STAC data access
+pystac-client
+odc-stac
+
+# Visualization
+matplotlib
+folium
+leafmap
+maplibre
+ipywidgets
+ipyleaflet
+
+# Image processing
+pillow
+imageio
+
+# Utilities
+requests
+tqdm
