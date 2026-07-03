@@ -25,7 +25,7 @@ Notebooks
 3. Global_flood_monitoring_time_series/
    - Loads GFM flood extent time series via STAC API
    - Exports per-day flood PNG overlays with cumulative fading effect
-   - Renders animated GIF with OSM basemap and flooded-area bar chart
+   - Renders animated GIF with CartoDB Positron basemap and flooded-area bar chart
    - Embeds interactive HTML5 frame-by-frame player in the notebook
 
 
@@ -53,6 +53,8 @@ Prerequisites: pixi (https://pixi.sh)
 
 The environment is defined in pixi.toml and includes all dependencies
 (geospatial, visualization, STAC access, Jupyter).
+
+A requirements.txt is also provided for use with Binder or plain pip environments.
 
 
 Key Dependencies
