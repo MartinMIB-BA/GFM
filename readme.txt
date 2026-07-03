@@ -33,8 +33,6 @@ Data Source
 -----------
 - STAC API: https://stac.eodc.eu/api/v1
 - Collection: GFM (Global Flood Monitoring)
-- Band: ensemble_flood_extent (uint8, 0=no flood, 1-100=flood, 255=nodata)
-- Resolution: 20m (Azimuthal Equidistant projection, reprojected to EPSG:4326)
 
 
 Environment Setup
@@ -75,12 +73,4 @@ Usage Notes
 - All notebooks include interactive map widgets (ipyleaflet) for drawing an AOI.
   These require JupyterLab in a browser (pixi run lab).
 - Default bounding boxes are provided so notebooks can run without drawing.
-- The Overpass API (OpenStreetMap) may rate-limit; if 406 errors occur, wait a
-  minute or switch to an alternative endpoint (see notebook comments).
 
-
-License
--------
-Notebooks: provided as-is for educational and research purposes.
-GFM data: Copernicus Emergency Management Service (CEMS), EU.
-OSM data: OpenStreetMap contributors, ODbL license.
