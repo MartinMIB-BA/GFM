@@ -16,4 +16,6 @@
 *.csv
 *.gpkg
 *.geojson
+*.py
 flood_frames/
+kiro/
